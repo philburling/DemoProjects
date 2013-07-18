@@ -3,11 +3,11 @@ package com.blahsoft.noughtsandcrosses;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
-import com.blah.designpatterns.ObserverInterface;
 import com.blahsoft.ai.AIStrategy;
 import com.blahsoft.boardgame.BoardGameViewModelInterface;
 import com.blahsoft.boardgame.GameStateModelInterface;
 import com.blahsoft.boardgame.Move;
+import com.blahsoft.designpatterns.ObserverInterface;
 
 
 public class NCViewModel implements BoardGameViewModelInterface {

@@ -1,4 +1,4 @@
-package com.blah.designpatterns;
+package com.blahsoft.designpatterns;
 
 
 /* For use with ObservableInterface in implementing the Observer pattern */

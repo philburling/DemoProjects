@@ -1,7 +1,7 @@
 package com.blahsoft.boardgame;
 
-import com.blah.designpatterns.ObservableInterface;
 import com.blahsoft.ai.AIStrategy;
+import com.blahsoft.designpatterns.ObservableInterface;
 
 /* Classes that implement this interface are responsible for hosting the game-settings of a board game  
  * and conducting the game according to them. The game flow-of-control is not conducted in a loop,

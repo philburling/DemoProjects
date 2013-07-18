@@ -1,4 +1,4 @@
-package com.blah.designpatterns;
+package com.blahsoft.designpatterns;
 
 
 public interface ObservableInterface {

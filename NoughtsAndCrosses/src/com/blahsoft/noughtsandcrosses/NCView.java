@@ -21,12 +21,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-import com.blah.designpatterns.ViewInterface;
 import com.blahsoft.boardgame.BoardGameControllerInterface;
 import com.blahsoft.boardgame.BoardGameViewModelInterface;
 import com.blahsoft.boardgame.GameStateModelInterface;
 import com.blahsoft.boardgame.Move;
 import com.blahsoft.boardgame.Move2D;
+import com.blahsoft.designpatterns.ViewInterface;
 
 public class NCView implements ViewInterface, ActionListener, MouseListener {
 	//Program components

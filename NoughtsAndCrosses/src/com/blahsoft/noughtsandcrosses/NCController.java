@@ -1,10 +1,10 @@
 package com.blahsoft.noughtsandcrosses;
 
-import com.blah.designpatterns.ViewInterface;
 import com.blahsoft.ai.Minimax;
 import com.blahsoft.boardgame.BoardGameControllerInterface;
 import com.blahsoft.boardgame.BoardGameViewModelInterface;
 import com.blahsoft.boardgame.Move;
+import com.blahsoft.designpatterns.ViewInterface;
 
 public class NCController implements BoardGameControllerInterface {
 
