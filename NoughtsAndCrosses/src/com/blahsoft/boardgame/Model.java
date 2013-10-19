@@ -12,7 +12,7 @@ import com.blahsoft.designpatterns.ObservableInterface;
  * the AI when the game is started if AI is enabled and is the starting player.
  */
 
-public interface BoardGameViewModelInterface extends ObservableInterface {
+public interface Model extends ObservableInterface {
 	
 	/* This class will store information on whether a particular player of the game is AI controlled or human controlled. */
 	public static final int AI_PLAYER = 0;

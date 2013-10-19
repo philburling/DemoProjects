@@ -21,8 +21,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-import com.blahsoft.boardgame.BoardGameControllerInterface;
-import com.blahsoft.boardgame.BoardGameViewModelInterface;
+import com.blahsoft.boardgame.ControllerInterface;
+import com.blahsoft.boardgame.Model;
 import com.blahsoft.boardgame.GameStateModelInterface;
 import com.blahsoft.boardgame.Move;
 import com.blahsoft.boardgame.Move2D;
@@ -30,12 +30,12 @@ import com.blahsoft.designpatterns.ViewInterface;
 
 public class NCView implements ViewInterface, ActionListener, MouseListener {
 	//Program components
-	BoardGameViewModelInterface viewModel;
-	BoardGameControllerInterface controller;
+	Model viewModel;
+	ControllerInterface controller;
 	//UI components
 	JFrame viewFrame;
 	JPanel contentPanel;
-	NCBoardPanel boardPanel;
+	BoardPanel boardPanel;
 	JPanel controls;
 	JLabel opponentModeLabel;
 	ButtonGroup opponentModeButtons;
@@ -51,7 +51,7 @@ public class NCView implements ViewInterface, ActionListener, MouseListener {
 	JMenuBar menuBar;
 	Boolean gameOverMessageDisplayed;
 	
-	public NCView(BoardGameControllerInterface controller, BoardGameViewModelInterface viewModel) {
+	public NCView(ControllerInterface controller, Model viewModel) {
 		this.controller = controller;
 		this.viewModel = viewModel;
 		viewModel.registerObserver(this);
@@ -72,7 +72,7 @@ public class NCView implements ViewInterface, ActionListener, MouseListener {
 		contentPanel = new JPanel(new BorderLayout());
 		viewFrame.setContentPane(contentPanel);
 		
-		boardPanel = new NCBoardPanel();
+		boardPanel = new BoardPanel();
 		boardPanel.setOpaque(true);
 		boardPanel.setBackground(Color.BLACK);
 		boardPanel.setPreferredSize(new Dimension (400,400));

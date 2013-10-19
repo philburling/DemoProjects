@@ -9,13 +9,13 @@ import javax.swing.JPanel;
 
 /* This class displays a board used for a game of Noughts & Crosses */
 
-class NCBoardPanel extends JPanel {
+class BoardPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	private static final int BOARD_SIZE = 3;
 	private char [][] board;
 	  
-	public NCBoardPanel() {
+	public BoardPanel() {
 		this.board  = new char[BOARD_SIZE][BOARD_SIZE];
 	}
 	

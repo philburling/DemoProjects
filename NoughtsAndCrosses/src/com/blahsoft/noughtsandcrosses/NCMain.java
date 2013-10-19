@@ -1,8 +1,8 @@
 package com.blahsoft.noughtsandcrosses;
 
 import com.blahsoft.ai.AIStrategy;
-import com.blahsoft.boardgame.BoardGameControllerInterface;
-import com.blahsoft.boardgame.BoardGameViewModelInterface;
+import com.blahsoft.boardgame.ControllerInterface;
+import com.blahsoft.boardgame.Model;
 
 /**
  * @author Phil
@@ -15,7 +15,7 @@ public class NCMain {
 	public static void main(String[] args) {
 
 		AIStrategy simpleNCAI = new SimpleNCAI();
-		BoardGameViewModelInterface model = new NCViewModel(simpleNCAI);
-		BoardGameControllerInterface controller = new NCController(model); //The view is initialised in the controller's constructor.
+		Model model = new NCViewModel(simpleNCAI);
+		ControllerInterface controller = new NCController(model); //The view is initialised in the controller's constructor.
 	}
 }

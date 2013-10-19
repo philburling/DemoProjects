@@ -1,17 +1,17 @@
 package com.blahsoft.noughtsandcrosses;
 
 import com.blahsoft.ai.Minimax;
-import com.blahsoft.boardgame.BoardGameControllerInterface;
-import com.blahsoft.boardgame.BoardGameViewModelInterface;
+import com.blahsoft.boardgame.ControllerInterface;
+import com.blahsoft.boardgame.Model;
 import com.blahsoft.boardgame.Move;
 import com.blahsoft.designpatterns.ViewInterface;
 
-public class NCController implements BoardGameControllerInterface {
+public class NCController implements ControllerInterface {
 
-	BoardGameViewModelInterface model;
+	Model model;
 	ViewInterface view;
 	
-	public NCController (BoardGameViewModelInterface model) {
+	public NCController (Model model) {
 		this.model = model;
 		this.view = new NCView(this, model);
 		view.createView();
@@ -19,9 +19,9 @@ public class NCController implements BoardGameControllerInterface {
 	@Override
 	public void setOpponentMode(String mode) {
 		if (mode.equalsIgnoreCase("ai")) {
-			model.setOpponentMode(BoardGameViewModelInterface.AI_PLAYER);			
+			model.setOpponentMode(Model.AI_PLAYER);			
 		} else if (mode.equalsIgnoreCase("hotseat")) {
-			model.setOpponentMode(BoardGameViewModelInterface.HUMAN_PLAYER);
+			model.setOpponentMode(Model.HUMAN_PLAYER);
 		} else {
 			throw new IllegalArgumentException("Unexpected value passed to setOpponentMode");
 		}

@@ -4,13 +4,13 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 import com.blahsoft.ai.AIStrategy;
-import com.blahsoft.boardgame.BoardGameViewModelInterface;
+import com.blahsoft.boardgame.Model;
 import com.blahsoft.boardgame.GameStateModelInterface;
 import com.blahsoft.boardgame.Move;
 import com.blahsoft.designpatterns.ObserverInterface;
 
 
-public class NCViewModel implements BoardGameViewModelInterface {
+public class NCViewModel implements Model {
 	ArrayList<WeakReference<ObserverInterface>> observerReferences;
 	private int opponentMode;
 	private boolean crossesStarts;

@@ -2,7 +2,7 @@ package com.blahsoft.boardgame;
 
 /* This interface is for translating actions originating from the user-interface of a board game into 
  * manipulations of a 'view-model' object containing game-options and an encapsulated game-state object */
-public interface BoardGameControllerInterface {
+public interface ControllerInterface {
 	
 	public void setOpponentMode(String mode); // Set whether an opponent is AI-controlled or controlled by another human.
 	public void setStartingPlayer(char player);
